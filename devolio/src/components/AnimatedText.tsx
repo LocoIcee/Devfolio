@@ -24,39 +24,35 @@ export default function AnimatedText({
     threshold: 0.1 
   });
   const [displayedText, setDisplayedText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [animationComplete, setAnimationComplete] = useState(false);
 
-  useEffect(() => {
-    if (inView && !animationComplete) {
-      // Reset if we need to replay the animation
-      if (currentIndex > 0 && !once) {
-        setCurrentIndex(0);
-        setDisplayedText('');
-      }
-      
-      // Wait for the specified delay before starting
-      const timeout = setTimeout(() => {
-        const typingInterval = setInterval(() => {
-          if (currentIndex < text.length) {
-            setDisplayedText(prev => prev + text[currentIndex]);
-            setCurrentIndex(prev => prev + 1);
+ useEffect(() => {
+  if (inView && !animationComplete) {
+    const timeout = setTimeout(() => {
+      const typingInterval = setInterval(() => {
+        setDisplayedText((prev) => {
+          if (prev.length < text.length) {
+            return prev + text[prev.length];
           } else {
             clearInterval(typingInterval);
             setAnimationComplete(true);
             controls.start({ opacity: 1 });
+            return prev;
           }
-        }, duration * 1000);
-        
-        return () => clearInterval(typingInterval);
-      }, delay * 1000);
-      
-      return () => clearTimeout(timeout);
-    } else if (!inView && !once && animationComplete) {
-      // Reset animation if not in view and not set to run only once
-      setAnimationComplete(false);
-    }
-  }, [inView, once, text, currentIndex, controls, animationComplete, delay, duration]);
+        });
+      }, duration * 1000);
+      return () => clearInterval(typingInterval);
+    }, delay * 1000);
+
+    return () => clearTimeout(timeout);
+  }
+
+  if (!inView && !once && animationComplete) {
+    setDisplayedText('');
+    setAnimationComplete(false);
+  }
+}, [inView, once, text, controls, animationComplete, delay, duration]);
+
 
   return (
     <motion.div

@@ -115,20 +115,20 @@ export default function Projects() {
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedText 
           text="My Projects" 
-          className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-600"
+          className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-500 to-green-500"
         />
         
         <div className="max-w-md mx-auto mb-12 flex justify-center">
           <div className="bg-white/10 backdrop-blur-md rounded-full p-1 flex">
             <button 
               onClick={() => setFilter('all')} 
-              className={`px-6 py-2 rounded-full transition-all ${filter === 'all' ? 'bg-purple-600 text-white' : 'text-gray-300 hover:text-white'}`}
+              className={`px-6 py-2 rounded-full transition-all ${filter === 'all' ? 'bg-blue-600 text-white' : 'text-gray-300 hover:text-white'}`}
             >
               All Projects
             </button>
             <button 
               onClick={() => setFilter('featured')} 
-              className={`px-6 py-2 rounded-full transition-all ${filter === 'featured' ? 'bg-purple-600 text-white' : 'text-gray-300 hover:text-white'}`}
+              className={`px-6 py-2 rounded-full transition-all ${filter === 'featured' ? 'bg-blue-600 text-white' : 'text-gray-300 hover:text-white'}`}
             >
               Featured
             </button>
@@ -137,7 +137,7 @@ export default function Projects() {
 
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
           </div>
         ) : (
           <motion.div 

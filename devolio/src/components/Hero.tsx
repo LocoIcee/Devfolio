@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
+import Link from 'next/link';
 
 export default function Hero() {
   const { isDarkMode } = useTheme();
@@ -49,7 +50,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center relative overflow-hidden">
+    <section className="h-screen mx-auto flex flex-col justify-center items-center relative overflow-hidden">
       <div className="relative z-10 text-center">
         <motion.p
           initial={{ opacity: 0, y: -20 }}
@@ -72,7 +73,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
           <span className="bg-linear-to-r from-blue-400 via-teal-500 to-green-500 bg-clip-text text-transparent">
-            Your Name
+            Cameron Hill
           </span>
         </motion.h1>
         
@@ -104,21 +105,25 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.5 }}
         >
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-linear-to-r from-blue-600 to-green-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-teal-500/20 transition-all"
-            >
+            <Link href="/projects">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-linear-to-r from-blue-600 to-green-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-teal-500/20 transition-all"
+              >
               View My Work
-            </motion.button>
+              </motion.button>
+            </Link>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-transparent text-white font-medium rounded-full border border-gray-600 hover:border-teal-500 transition-all"
-            >
-              Contact Me
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-transparent text-white font-medium rounded-full border border-gray-600 hover:border-teal-500 transition-all"
+              >
+                Contact Me
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -135,13 +140,13 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           <span className="text-gray-400 text-sm mb-2">Scroll Down</span>
-          <ArrowDown className="h-5 w-5 text-purple-400" />
+          <ArrowDown className="h-5 w-5 text-green-500" />
         </motion.div>
       </motion.div>
       
       {/* Gradient circles */}
-      <div className="absolute top-1/3 -right-72 w-160 h-160 bg-purple-600 rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-1/3 -left-72 w-120 h-120 bg-pink-600 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-1/3 -right-72 w-135 h-135 bg-blue-400 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-1/3 -left-72 w-120 h-120 bg-green-500 rounded-full opacity-10 blur-3xl"></div>
     </section>
   );
 }

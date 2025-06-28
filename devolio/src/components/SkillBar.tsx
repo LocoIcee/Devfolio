@@ -29,11 +29,11 @@ export default function SkillBar({ name, percentage, delay = 0 }: SkillBarProps)
     <div className="mb-4">
       <div className="flex justify-between mb-1">
         <span className="text-sm font-medium text-gray-300">{name}</span>
-        <span className="text-sm font-medium text-purple-400">{percentage}%</span>
+        <span className="text-sm font-medium text-blue-400">{percentage}%</span>
       </div>
       <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
         <motion.div
-          className="bg-linear-to-r from-purple-500 to-pink-600 h-2 rounded-full"
+          className="bg-linear-to-r from-blue-400 via-teal-500 to-green-500 h-2 rounded-full"
           initial={{ width: "0%" }}
           animate={controls}
         />

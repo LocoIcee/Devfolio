@@ -10,7 +10,7 @@ interface ParticleBackgroundProps {
 export default function ParticleBackground({ 
   density = 50, 
   speed = 0.5,
-  color = '#8b5cf6' 
+  color = '#5B98F5' 
 }: ParticleBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   

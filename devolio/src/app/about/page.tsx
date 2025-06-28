@@ -87,7 +87,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <AnimatedText 
             text="About Me" 
-            className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-600"
+            className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-500 to-green-500"
           />
 
           <motion.div

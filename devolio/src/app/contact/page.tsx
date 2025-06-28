@@ -43,7 +43,7 @@ export default function Contact() {
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedText 
           text="Get In Touch" 
-          className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-600"
+          className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-500 to-green-500"
         />
 
         <motion.div
@@ -60,49 +60,25 @@ export default function Contact() {
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <div className="bg-purple-600/20 p-3 rounded-full mr-4">
-                      <Mail className="h-6 w-6 text-purple-500" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">Email</p>
-                      <a href="mailto:contact@yourdomain.com" className="text-lg font-medium hover:text-purple-400 transition-colors">
-                        contact@yourdomain.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <div className="bg-purple-600/20 p-3 rounded-full mr-4">
-                      <Github className="h-6 w-6 text-purple-500" />
+                    <div className="bg-blue-600/20 p-3 rounded-full mr-4">
+                      <Github className="h-6 w-6 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">GitHub</p>
-                      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-purple-400 transition-colors">
-                        github.com/yourusername
+                      <a href="https://github.com/LocoIcee" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-blue-400 transition-colors">
+                        github.com/LocoIcee
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="bg-purple-600/20 p-3 rounded-full mr-4">
-                      <Linkedin className="h-6 w-6 text-purple-500" />
+                    <div className="bg-blue-600/20 p-3 rounded-full mr-4">
+                      <Linkedin className="h-6 w-6 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">LinkedIn</p>
-                      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-purple-400 transition-colors">
-                        linkedin.com/in/yourusername
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <div className="bg-purple-600/20 p-3 rounded-full mr-4">
-                      <Twitter className="h-6 w-6 text-purple-500" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">Twitter</p>
-                      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-purple-400 transition-colors">
-                        @yourusername
+                      <a href="https://linkedin.com/in/cameron-hill-26619b183" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-blue-400 transition-colors">
+                        linkedin.com/in/cameron-hill-26619b183
                       </a>
                     </div>
                   </div>
@@ -114,6 +90,7 @@ export default function Contact() {
                     I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                   </p>
                 </div>
+
               </div>
             </motion.div>
             
@@ -127,7 +104,7 @@ export default function Contact() {
                   </p>
                   <button 
                     onClick={() => setFormSubmitted(false)}
-                    className="mt-6 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
                   >
                     Send Another Message
                   </button>

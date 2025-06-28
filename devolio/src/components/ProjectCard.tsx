@@ -62,7 +62,7 @@ export default function ProjectCard({ project }: ProjectProps) {
         {/* Featured Badge */}
         {project.featured && (
           <div className="absolute top-3 right-3">
-            <Badge className="bg-purple-600 hover:bg-purple-700">Featured</Badge>
+            <Badge className="bg-teal-500/50 hover:bg-green-700">Featured</Badge>
           </div>
         )}
         
@@ -106,7 +106,7 @@ export default function ProjectCard({ project }: ProjectProps) {
             animate={isHovered ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <Button size="sm" variant="outline" className="bg-black/50 border-gray-700 hover:bg-purple-600 hover:border-purple-600 gap-2">
+            <Button size="sm" variant="outline" className="bg-black/50 border-gray-700 hover:bg-blue-600 hover:border-blue-600 gap-2">
               <Github className="h-4 w-4" />
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 GitHub
@@ -114,7 +114,7 @@ export default function ProjectCard({ project }: ProjectProps) {
             </Button>
             
             {project.demoUrl && (
-              <Button size="sm" className="bg-purple-600 hover:bg-purple-700 gap-2">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 gap-2">
                 <ExternalLink className="h-4 w-4" />
                 <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                   Demo
