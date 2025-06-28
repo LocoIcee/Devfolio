@@ -128,24 +128,8 @@ export default function Hero() {
         </motion.div>
       </div>
       
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 2 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center"
-        >
-          <span className="text-gray-400 text-sm mb-2">Scroll Down</span>
-          <ArrowDown className="h-5 w-5 text-green-500" />
-        </motion.div>
-      </motion.div>
-      
       {/* Gradient circles */}
-      <div className="absolute top-1/3 -right-72 w-135 h-135 bg-blue-400 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-1/3 -right-72 w-123 h-124 bg-blue-400 rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-1/3 -left-72 w-120 h-120 bg-green-500 rounded-full opacity-10 blur-3xl"></div>
     </section>
   );

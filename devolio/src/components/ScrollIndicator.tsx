@@ -20,7 +20,7 @@ export default function ScrollIndicator() {
         <span className="text-xs text-gray-400 mb-2">Scroll</span>
         <div className="w-5 h-9 rounded-full border border-gray-600 flex justify-center p-1">
           <motion.div 
-            className="w-1 h-1.5 bg-purple-500 rounded-full"
+            className="w-1 h-1.5 bg-green-500 rounded-full"
             animate={{ y: [0, 12, 0] }}
             transition={{ 
               duration: 1.5, 

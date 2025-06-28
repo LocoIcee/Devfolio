@@ -51,26 +51,6 @@ export default function Index() {
               className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-500 to-green-500" 
               once={false}
             />
-            
-            <div className="prose prose-lg dark:prose-invert mx-auto mb-10 opacity-90">
-              <p className="leading-relaxed">
-                I build exceptional and accessible digital experiences for the web,
-                focusing on performance, animation, and pixel-perfect design.
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full">
-                <Link href="/projects">
-                  View My Work <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-blue-400 text-blue-400 hover:text-blue-600 hover:border-blue-600">
-                <Link href="/contact">
-                  Get In Touch
-                </Link>
-              </Button>
-            </div>
           </div>
         </motion.section>
         
