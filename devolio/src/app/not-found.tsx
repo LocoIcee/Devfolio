@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import ParticleBackground from '@/components/ParticleBackground';

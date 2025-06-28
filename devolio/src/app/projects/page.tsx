@@ -28,12 +28,12 @@ export default function Projects() {
       const dummyProjects: Project[] = [
         {
           id: 1,
-          title: "E-commerce Platform",
-          description: "A full-featured e-commerce platform with product listings, cart functionality, and payment processing using Stripe.",
-          technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-          imageUrl: "/assets/projects/ecommerce.jpg", // This would be replaced with actual image paths
-          githubUrl: "https://github.com/yourusername/ecommerce-platform",
-          demoUrl: "https://ecommerce-demo.example.com",
+          title: "Almost Home Canine Rescue (AHCR)",
+          description: "A full-featured dog rescue platform with dynameic dog listings, and payment processing using Stripe and Paypal.",
+          technologies: ["React", "Node.js", "Next.js", "Supabase", "Stripe API", "Paypal SDK" ],
+          imageUrl: "", // This would be replaced with actual image paths
+          githubUrl: "https://github.com/LocoIcee/AHCR.git",
+          demoUrl: "https://ahcr.vercel.app/",
           featured: true
         },
         {
@@ -41,7 +41,7 @@ export default function Projects() {
           title: "Task Management App",
           description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
           technologies: ["React", "Firebase", "Tailwind CSS", "React DnD"],
-          imageUrl: "/assets/projects/taskmanager.jpg",
+          imageUrl: "",
           githubUrl: "https://github.com/yourusername/task-manager",
           featured: true
         },
@@ -50,7 +50,7 @@ export default function Projects() {
           title: "Portfolio Website",
           description: "A responsive portfolio website showcasing projects and skills with an interactive user interface.",
           technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-          imageUrl: "/assets/projects/portfolio.jpg",
+          imageUrl: "",
           githubUrl: "https://github.com/yourusername/portfolio",
           demoUrl: "https://yourportfolio.com",
           featured: false
@@ -60,7 +60,7 @@ export default function Projects() {
           title: "Weather Dashboard",
           description: "A weather application displaying current conditions and forecasts using weather API data.",
           technologies: ["JavaScript", "HTML", "CSS", "OpenWeather API"],
-          imageUrl: "/assets/projects/weather.jpg",
+          imageUrl: "",
           githubUrl: "https://github.com/yourusername/weather-dashboard",
           featured: false
         },
@@ -69,7 +69,7 @@ export default function Projects() {
           title: "Blog Platform",
           description: "A content management system for creating and managing blog posts with user authentication.",
           technologies: ["Next.js", "GraphQL", "PostgreSQL", "Auth0"],
-          imageUrl: "/assets/projects/blog.jpg",
+          imageUrl: "",
           githubUrl: "https://github.com/yourusername/blog-platform",
           demoUrl: "https://blog-demo.example.com",
           featured: true
@@ -79,7 +79,7 @@ export default function Projects() {
           title: "Social Media Dashboard",
           description: "An analytics dashboard for tracking social media engagement and performance metrics.",
           technologies: ["Vue.js", "D3.js", "Express", "MongoDB"],
-          imageUrl: "/assets/projects/social.jpg",
+          imageUrl: "",
           githubUrl: "https://github.com/yourusername/social-dashboard",
           featured: false
         }
