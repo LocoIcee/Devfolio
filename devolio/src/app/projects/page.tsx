@@ -31,7 +31,7 @@ export default function Projects() {
           title: "Almost Home Canine Rescue (AHCR)",
           description: "A full-featured dog rescue platform with dynameic dog listings, and payment processing using Stripe and Paypal.",
           technologies: ["React", "Node.js", "Next.js", "Supabase", "Stripe API", "Paypal SDK" ],
-          imageUrl: "", // This would be replaced with actual image paths
+          imageUrl: "/images/ahcr.png", // This would be replaced with actual image paths
           githubUrl: "https://github.com/LocoIcee/AHCR.git",
           demoUrl: "https://ahcr.vercel.app/",
           featured: true

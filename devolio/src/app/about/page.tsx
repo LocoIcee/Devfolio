@@ -98,21 +98,16 @@ export default function About() {
             className="mb-16"
           >
             <motion.div variants={itemVariants} className="prose dark:prose-invert max-w-none mb-12 backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-800">
-              <p className="text-lg leading-relaxed">
-                I am a passionate developer with a strong focus on creating exceptional digital experiences. 
-                With a keen eye for detail and a love for clean, efficient code, I strive to build applications 
-                that are not only functional but also visually stunning and enjoyable to use.
-              </p>
-              <p className="text-lg leading-relaxed">
-                My journey in tech began over 5 years ago, and since then, I've worked with a variety of technologies 
-                and frameworks to deliver solutions that solve real-world problems. I believe in continuous learning 
-                and staying updated with the latest industry trends and best practices.
-              </p>
-              <p className="text-lg leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-                or sharing my knowledge through blog posts and community involvement.
-              </p>
-            </motion.div>
+  <p className="text-lg leading-relaxed">
+    I’m a Calgary-based software developer with a Bachelor of Science in Computer Science, passionate about solving problems and creating clean, engaging digital experiences. With a keen eye for detail and a love of building systems that just work, I strive to develop applications that are functional, scalable, and enjoyable to use.
+  </p>
+  <p className="text-lg leading-relaxed">
+    Over the past few years, I’ve worked across a range of technologies and frameworks, from frontend design to backend logic, contributing to projects that solve real-world challenges. I’m a continuous learner, always exploring new tools and staying current with industry best practices.
+  </p>
+  <p className="text-lg leading-relaxed">
+    Beyond code, I’m a hands-on creator — whether that means working on cars, exploring new game technologies, or building prototypes on my 3D printer. I love tackling challenges that blend creativity and engineering, and collaborating with others to make ideas come to life. Looking ahead, I’m excited to grow as a developer and contribute to meaningful projects that have real impact.
+  </p>
+</motion.div>
 
             <motion.div variants={itemVariants} className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>

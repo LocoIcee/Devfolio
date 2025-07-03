@@ -4,7 +4,9 @@ import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink} from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+import Link from 'next/link';
 
 interface ProjectProps {
   project: {
@@ -38,7 +40,7 @@ export default function ProjectCard({ project }: ProjectProps) {
   };
 
   // Default project image (you can replace with your own)
-  const projectImage = project.imageUrl || 'https://via.placeholder.com/600x400/1a1a1a/8b5cf6?text=Project+Image';
+  const projectImage = project.imageUrl || null;
 
   return (
     <motion.div
@@ -107,18 +109,18 @@ export default function ProjectCard({ project }: ProjectProps) {
             transition={{ duration: 0.3, delay: 0.2 }}
           >
             <Button size="sm" variant="outline" className="bg-black/50 border-gray-700 hover:bg-blue-600 hover:border-blue-600 gap-2">
-              <Github className="h-4 w-4" />
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <FaGithub className="h-4 w-4" />
                 GitHub
-              </a>
+              </Link>
             </Button>
             
             {project.demoUrl && (
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700 gap-2">
-                <ExternalLink className="h-4 w-4" />
-                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                  Demo
-                </a>
+                 <Link href={project.demoUrl ?? "#"} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4" />
+                    View
+                  </Link>
               </Button>
             )}
           </motion.div>

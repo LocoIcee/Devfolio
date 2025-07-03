@@ -54,7 +54,7 @@ export default function Contact() {
           className="max-w-6xl mx-auto"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div variants={itemVariants} className="order-2 lg:order-1">
+            <motion.div variants={itemVariants} className="order-1">
               <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-800 h-full">
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="order-1 lg:order-2">
+            <motion.div variants={itemVariants} className="order-2">
               {formSubmitted ? (
                 <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-800 flex flex-col items-center justify-center h-full">
                   <div className="text-green-500 text-5xl mb-4">✓</div>
