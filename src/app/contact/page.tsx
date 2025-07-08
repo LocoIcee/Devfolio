@@ -85,9 +85,9 @@ export default function Contact() {
                 </div>
                 
                 <div className="mt-12">
-                  <h3 className="text-lg font-medium mb-4">Let's Connect</h3>
+                  <h3 className="text-lg font-medium mb-4">Let&apos;s Connect</h3>
                   <p className="text-gray-400 mb-6">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                   </p>
                 </div>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                   <div className="text-green-500 text-5xl mb-4">✓</div>
                   <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                   <p className="text-gray-400 text-center max-w-md">
-                    Thank you for reaching out! I'll get back to you as soon as possible.
+                    Thank you for reaching out! I&apos;ll get back to you as soon as possible.
                   </p>
                   <button 
                     onClick={() => setFormSubmitted(false)}

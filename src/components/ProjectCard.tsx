@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink} from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ProjectProps {
@@ -54,7 +55,7 @@ export default function ProjectCard({ project }: ProjectProps) {
     >
       {/* Project Image with overlay */}
       <div className="relative aspect-video overflow-hidden rounded-xl">
-        <img 
+        <Image 
           src={projectImage} 
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
