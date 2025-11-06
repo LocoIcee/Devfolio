@@ -1,12 +1,9 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
-import { useTheme } from '@/hooks/useTheme';
 import Link from 'next/link';
 
 export default function Hero() {
-  const { isDarkMode } = useTheme();
   const sentenceRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -105,6 +102,15 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.5 }}
         >
           <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/resume">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-transparent text-white font-medium rounded-full border border-blue-500/60 hover:border-blue-400 hover:text-blue-200 transition-all"
+              >
+                View Resume
+              </motion.button>
+            </Link>
             <Link href="/projects">
               <motion.button
                 whileHover={{ scale: 1.05 }}

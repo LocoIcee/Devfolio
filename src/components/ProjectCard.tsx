@@ -40,8 +40,8 @@ export default function ProjectCard({ project }: ProjectProps) {
     }
   };
 
-  // Default project image (you can replace with your own)
-  const projectImage = project.imageUrl || null;
+  const projectImage = project.imageUrl?.trim() || '';
+  const hasImage = Boolean(projectImage);
 
   return (
     <motion.div
@@ -55,12 +55,18 @@ export default function ProjectCard({ project }: ProjectProps) {
     >
       {/* Project Image with overlay */}
       <div className="relative aspect-video overflow-hidden rounded-xl">
-        <Image 
-          src={projectImage} 
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-transparent opacity-70"></div>
+        {hasImage ? (
+          <Image
+            src={projectImage}
+            alt={project.title}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-slate-800 to-slate-950 transition-transform duration-500 group-hover:scale-105" />
+        )}
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-transparent"></div>
         
         {/* Featured Badge */}
         {project.featured && (
