@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import type { LucideIcon } from 'lucide-react';
 
 interface TimelineItem {
   year: string;
   title: string;
   company: string;
   description: string;
+  icon?: LucideIcon;
 }
 
 interface TimelineProps {
@@ -47,12 +49,23 @@ export default function Timeline({ items }: TimelineProps) {
         <motion.div
           key={index}
           variants={itemVariants}
-          className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-12 ${
+          className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-12 pt-16 md:pt-0 ${
             index % 2 === 0 ? 'md:text-right' : ''
           }`}
         >
           {/* Timeline point */}
-          <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-2 border-blue-400 z-10"></div>
+          <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-linear-to-br from-blue-500 via-teal-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-blue-500/30 z-10">
+            {item.icon ? (
+              <item.icon
+                className="h-8 w-8 text-slate-900/80 dark:text-slate-950 transition-colors duration-300"
+                aria-hidden="true"
+              />
+            ) : (
+              <span className="text-slate-900/80 dark:text-slate-950" aria-hidden="true">
+                •
+              </span>
+            )}
+          </div>
           
           {/* Content */}
           <div className={`${index % 2 === 0 ? 'md:col-span-1' : 'md:col-start-2'}`}>

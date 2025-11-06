@@ -11,7 +11,7 @@ interface Project {
   description: string;
   technologies: string[];
   imageUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   demoUrl?: string;
   featured: boolean;
 }
@@ -28,61 +28,47 @@ export default function Projects() {
       const dummyProjects: Project[] = [
         {
           id: 1,
-          title: "Almost Home Canine Rescue (AHCR)",
-          description: "A full-featured dog rescue platform with dynameic dog listings, and payment processing using Stripe and Paypal.",
-          technologies: ["React", "Node.js", "Next.js", "Supabase", "Stripe API", "Paypal SDK" ],
-          imageUrl: "/images/ahcr.png", // This would be replaced with actual image paths
-          githubUrl: "https://github.com/LocoIcee/AHCR.git",
-          demoUrl: "https://ahcr.vercel.app/",
-          featured: true
+          title: 'Devtech Solutions',
+          description:
+            'Consulting and solutions hub featuring a service catalog, quote intake, and CRM integrations tailored for small businesses.',
+          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+          imageUrl: '/images/devtechsolutions.png',
+          demoUrl: 'https://devtechsolutions.ca',
+          featured: true,
         },
         {
           id: 2,
-          title: "Task Management App",
-          description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-          technologies: ["React", "Firebase", "Tailwind CSS", "React DnD"],
-          imageUrl: "",
-          githubUrl: "https://github.com/yourusername/task-manager",
-          featured: true
+          title: 'Almost Home Canine Rescue (AHCR)',
+          description:
+            'Full-featured rescue platform with dynamic pet listings, foster workflows, and donation processing powered by Stripe and PayPal integrations.',
+          technologies: ['Next.js', 'React', 'Supabase', 'Stripe', 'PayPal'],
+          imageUrl: '/images/ahcr.png',
+          githubUrl: 'https://github.com/LocoIcee/AHCR',
+          demoUrl: 'https://ahcr.vercel.app/',
+          featured: true,
         },
         {
           id: 3,
-          title: "Portfolio Website",
-          description: "A responsive portfolio website showcasing projects and skills with an interactive user interface.",
-          technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-          imageUrl: "",
-          githubUrl: "https://github.com/yourusername/portfolio",
-          demoUrl: "https://yourportfolio.com",
-          featured: false
+          title: 'Yasinaslight.com',
+          description:
+            'Collaborative site remodel for an artist collective with responsive storytelling sections, rich media, and custom theming.',
+          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+          imageUrl: '/images/yasinaslight.png',
+          githubUrl: 'https://github.com/LocoIcee/Yasinaslight',
+          demoUrl: 'https://yasinaslight.vercel.app',
+          featured: true,
         },
         {
           id: 4,
-          title: "Weather Dashboard",
-          description: "A weather application displaying current conditions and forecasts using weather API data.",
-          technologies: ["JavaScript", "HTML", "CSS", "OpenWeather API"],
-          imageUrl: "",
-          githubUrl: "https://github.com/yourusername/weather-dashboard",
-          featured: false
+          title: 'Safe Clean Maids',
+          description:
+            'Lead-focused marketing site for a residential cleaning service featuring service packages, testimonials, and booking CTAs.',
+          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+          imageUrl: '/images/safe-clean-maids.png',
+          githubUrl: 'https://github.com/LocoIcee/SafeCleanMaids',
+          demoUrl: 'https://safe-clean-maids.vercel.app',
+          featured: true,
         },
-        {
-          id: 5,
-          title: "Blog Platform",
-          description: "A content management system for creating and managing blog posts with user authentication.",
-          technologies: ["Next.js", "GraphQL", "PostgreSQL", "Auth0"],
-          imageUrl: "",
-          githubUrl: "https://github.com/yourusername/blog-platform",
-          demoUrl: "https://blog-demo.example.com",
-          featured: true
-        },
-        {
-          id: 6,
-          title: "Social Media Dashboard",
-          description: "An analytics dashboard for tracking social media engagement and performance metrics.",
-          technologies: ["Vue.js", "D3.js", "Express", "MongoDB"],
-          imageUrl: "",
-          githubUrl: "https://github.com/yourusername/social-dashboard",
-          featured: false
-        }
       ];
       
       setProjects(dummyProjects);

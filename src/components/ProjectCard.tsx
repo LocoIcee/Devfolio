@@ -16,7 +16,7 @@ interface ProjectProps {
     description: string;
     technologies: string[];
     imageUrl: string;
-    githubUrl: string;
+    githubUrl?: string;
     demoUrl?: string;
     featured: boolean;
   };
@@ -110,24 +110,30 @@ export default function ProjectCard({ project }: ProjectProps) {
             )}
           </motion.div>
           
-          <motion.div 
+          <motion.div
             className="flex flex-wrap gap-3"
             animate={isHovered ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            <Button size="sm" variant="outline" className="bg-black/50 border-gray-700 hover:bg-blue-600 hover:border-blue-600 gap-2">
-              <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="h-4 w-4" />
-                GitHub
-              </Link>
-            </Button>
-            
+            {project.githubUrl && (
+              <Button
+                size="sm"
+                variant="outline"
+                className="bg-black/50 border-gray-700 hover:bg-blue-600 hover:border-blue-600 gap-2"
+              >
+                <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="h-4 w-4" />
+                  GitHub
+                </Link>
+              </Button>
+            )}
+
             {project.demoUrl && (
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700 gap-2">
-                 <Link href={project.demoUrl ?? "#"} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-4 w-4" />
-                    View
-                  </Link>
+                <Link href={project.demoUrl ?? '#'} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  View
+                </Link>
               </Button>
             )}
           </motion.div>

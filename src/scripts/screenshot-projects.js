@@ -1,11 +1,23 @@
-import { chromium } from "playwright";
+const { chromium } = require("playwright");
 
 // update these with your real production URLs
 const projects = [
   {
+    name: "devtechsolutions",
+    url: "https://devtechsolutions.ca"
+  },
+  {
     name: "ahcr",
     url: "https://ahcr.vercel.app"
   },
+  {
+    name: "yasinaslight",
+    url: "https://yasinaslight.vercel.app"
+  },
+  {
+    name: "safe-clean-maids",
+    url: "https://safe-clean-maids.vercel.app"
+  }
 ];
 
 (async () => {
@@ -19,6 +31,7 @@ const projects = [
     try {
       console.log(`Capturing ${project.name}...`);
       await page.goto(project.url, { waitUntil: 'networkidle' });
+      await page.waitForTimeout(1500);
 
       await page.screenshot({
         path: `public/images/${project.name}.png`, // save to your Next.js public dir

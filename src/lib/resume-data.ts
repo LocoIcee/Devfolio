@@ -36,7 +36,7 @@ export const resumeData = {
     email: 'cameron13@live.ca',
   },
   summary:
-    'Versatile developer with hands-on experience in systems support, full-stack web development, and team leadership. Passionate about blending creative problem-solving with resilient, user-focused software.',
+    'Versatile developer with hands on experience in systems support, full stack web development, and team leadership. Passionate about blending creative problem solving with resilient, user focused software.',
   highlights: [
     {
       title: 'Multi-platform Technologist',
@@ -51,7 +51,7 @@ export const resumeData = {
     {
       title: 'Software Development',
       description:
-        'Hands-on experience in C++, Java, JavaScript, and Python with projects ranging from gaming simulations to production-ready web applications.',
+        'Hands on experience in C++, Java, JavaScript, and Python with projects ranging from gaming simulations to production ready web applications.',
     },
     {
       title: 'Driven Collaborator',
@@ -67,13 +67,15 @@ export const resumeData = {
       timeframe: 'Sept 2018 — Apr 2025',
       details: [
         'Coursework emphasizes software architecture, data structures, and applied physics.',
-        'Collaborated with peers to deliver research-driven software projects and comprehensive systems documentation.',
+        'Collaborated with peers to deliver research driven software projects and comprehensive systems documentation.',
       ],
     },
   ] satisfies ResumeEducation[],
   technicalProjects: [
-    'Designed and developed hotel management software solutions within a collaborative development team.',
-    'Built and deployed secure, interactive websites that enable users to explore tailored content and services.',
+    'Devtech Solutions - Launched a consulting hub with service catalog, CRM integration, and quote intake built on Next.js and Tailwind, deployed via Vercel.',
+    'Almost Home Canine Rescue (AHCR) - Built a full-featured rescue platform with dynamic pet listings, intake workflows, and Stripe/PayPal donations backed by Supabase.',
+    'Yasinaslight.com - Partnered with mgx.dev on a Next.js relaunch featuring CMS-friendly sections, accessible typography, and optimized storytelling for an artist collective.',
+    'Safe Clean Maids - Delivered a lead-focused cleaning service site with reusable Tailwind UI blocks, SEO-tuned copy, and contact flows deployed to Vercel.',
   ],
   experience: [
     {
@@ -84,6 +86,9 @@ export const resumeData = {
       achievements: [
         'Audit and prepare IT equipment for refurbishing, including setup, diagnostics, and detailed reporting on device health.',
         'Manage electronic inventory systems, ensuring accurate documentation for all incoming and outgoing assets.',
+        'Built a Python/DuckDB pipeline to merge audit and inventory CSVs into automated, standardized reports, reducing manual processing time.',
+        'Built a reusable USB based Windows OOBE environment that auto resets Autopilot state, speeding up the current enrollment check process by removing the need to reimage systems.',
+        'Deployed a self hosted Snipe-IT system via Docker for secure, on prem asset tracking and audit management.'
       ],
     },
     {
@@ -93,7 +98,7 @@ export const resumeData = {
       timeframe: 'Sept 2020 — Sept 2021',
       achievements: [
         'Analyzed factory order discrepancies and production efficiency to propose process improvements.',
-        'Led a team of 4–5 to streamline inventory management practices, improving turnaround for shipping and receiving.',
+        'Led a team of 3–4 to streamline inventory management practices, improving turnaround for shipping and receiving.',
       ],
     },
     {
@@ -117,18 +122,6 @@ export const resumeData = {
       ],
     },
   ] satisfies ResumeExperience[],
-  community: [
-    {
-      role: 'Volunteer',
-      organization: 'Salvation Army',
-      location: 'Brooks, AB',
-      timeframe: 'Sept 2017 — Aug 2018',
-      contributions: [
-        'Organized and merchandised inventory on the sales floor to elevate customer experience and sales.',
-        'Maintained a clean, welcoming storefront to support staff and serve the community effectively.',
-      ],
-    },
-  ] satisfies ResumeCommunity[],
   downloadHref: '/assets/cameron-hill-resume.pdf',
 };
 

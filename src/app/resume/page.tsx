@@ -284,48 +284,6 @@ export default function ResumePage() {
               ))}
             </div>
           </motion.div>
-
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={0.1}
-            className="mb-16"
-          >
-            <h2 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/10 text-orange-300">
-                05
-              </span>
-              Community Involvement
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {resumeData.community.map((entry, index) => (
-                <motion.div
-                  key={`${entry.role}-${entry.organization}`}
-                  variants={fadeIn}
-                  custom={0.2 + index * 0.1}
-                  className="rounded-2xl border border-gray-800 bg-white/5 p-6 backdrop-blur-sm"
-                >
-                  <div className="flex flex-col gap-2 mb-4">
-                    <h3 className="text-lg font-semibold text-white">{entry.role}</h3>
-                    <p className="text-gray-300">{entry.organization}</p>
-                    <span className="text-sm text-gray-400">
-                      {entry.location} • {entry.timeframe}
-                    </span>
-                  </div>
-                  <ul className="space-y-3 text-gray-300 text-sm leading-relaxed">
-                    {entry.contributions.map((contribution) => (
-                      <li key={contribution} className="flex gap-3">
-                        <span className="mt-2 h-2 w-2 rounded-full bg-orange-400"></span>
-                        <span>{contribution}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </section>
       </div>
     </div>
