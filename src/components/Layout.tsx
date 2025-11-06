@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ThemeSwitcher from './ThemeSwitcher';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -76,12 +75,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {item.name}
               </Link>
             ))}
-            <ThemeSwitcher />
           </nav>
 
           {/* Mobile Navigation Button */}
           <div className="flex md:hidden items-center space-x-4">
-            <ThemeSwitcher />
             <button 
               onClick={() => setMobileMenuOpen(true)} 
               className="text-gray-300 hover:text-white"
