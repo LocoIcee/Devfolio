@@ -57,18 +57,7 @@ export default function Projects() {
           githubUrl: 'https://github.com/LocoIcee/Yasinaslight',
           demoUrl: 'https://yasinaslight.vercel.app',
           featured: true,
-        },
-        {
-          id: 4,
-          title: 'Safe Clean Maids',
-          description:
-            'Lead-focused marketing site for a residential cleaning service featuring service packages, testimonials, and booking CTAs.',
-          technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-          imageUrl: '/images/safe-clean-maids.png',
-          githubUrl: 'https://github.com/LocoIcee/SafeCleanMaids',
-          demoUrl: 'https://safe-clean-maids.vercel.app',
-          featured: true,
-        },
+        }
       ];
       
       setProjects(dummyProjects);
@@ -141,6 +130,12 @@ export default function Projects() {
         {!isLoading && filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <p className="text-xl text-gray-400">No projects found.</p>
+          </div>
+        )}
+        
+                {!isLoading && projects.length < 4 && (
+          <div className="mt-16 text-center text-gray-400 text-sm">
+            More legacy and in-progress builds coming soon.
           </div>
         )}
       </div>

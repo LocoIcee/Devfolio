@@ -54,7 +54,7 @@ export default function Timeline({ items }: TimelineProps) {
           }`}
         >
           {/* Timeline point */}
-          <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-linear-to-br from-blue-500 via-teal-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-blue-500/30 z-10">
+          <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-linear-to-br from-blue-500 via-teal-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-blue-500/30 z-10">
             {item.icon ? (
               <item.icon
                 className="h-8 w-8 text-slate-900/80 dark:text-slate-950 transition-colors duration-300"
