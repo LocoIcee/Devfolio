@@ -72,10 +72,8 @@ export const resumeData = {
     },
   ] satisfies ResumeEducation[],
   technicalProjects: [
-    'Devtech Solutions - Launched a consulting hub with service catalog, CRM integration, and quote intake built on Next.js and Tailwind, deployed via Vercel.',
-    'Almost Home Canine Rescue (AHCR) - Built a full-featured rescue platform with dynamic pet listings, intake workflows, and Stripe/PayPal donations backed by Supabase.',
-    'Yasinaslight.com - Partnered with mgx.dev on a Next.js relaunch featuring CMS-friendly sections, accessible typography, and optimized storytelling for an artist collective.',
-    'Safe Clean Maids - Delivered a lead-focused cleaning service site with reusable Tailwind UI blocks, SEO-tuned copy, and contact flows deployed to Vercel.',
+    'Designed and developed hotel management software solutions within a collaborative development team.',
+    'Built and deployed secure, interactive websites that enable users to explore tailored content and services.'
   ],
   experience: [
     {
